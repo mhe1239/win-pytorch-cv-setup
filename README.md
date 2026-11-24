@@ -1,14 +1,31 @@
-# CV1
+# PyTorch Computer Vision Environment Setup (Windows)
 
-## 다른 컴퓨터에서 실행하기 (Windows)
+Windows 환경에서 PyTorch(CUDA 12.8) 기반 컴퓨터 비전(CV) 개발 및 모델 시각화(`torchviz`) 환경을 구축하는 레포지토리입니다.
 
-Python 3.12와 VS Code의 Python, Jupyter 확장을 설치한 후, 저장소 폴더를 VS Code에서 엽니다. VS Code 터미널에서 다음 명령을 실행하세요.
+## 포함된 구성
+- **System App:** Graphviz (`winget` 자동 설치)
+- **Python Packages:** `torch`, `torchvision` (cu128), `torchinfo`, `torchviz`, `graphviz`, `numpy`, `pandas`, `scikit-learn`, `matplotlib`, `tqdm`, `ipykernel`, `ipywidgets`
+- **Jupyter Setup:** `CV_venv` 커널 등록 및 기본 임포트가 포함된 `1.ipynb` 생성
+
+---
+
+## 설치 및 실행 방법 (택 1)
+
+### 방법 1: 원클릭 전체 자동 세팅 (추천)
+가상환경 생성, 패키지 설치, Graphviz 앱 설치, Jupyter 커널(`CV_venv`) 등록, `1.ipynb` 생성을 한 번에 처리합니다.
+
+1. 이 레포지토리를 클론하거나 ZIP으로 다운로드합니다.
+2. 폴더 내의 **`setup.bat`** 파일을 더블클릭(또는 터미널에서 `.\setup.bat`)하여 실행합니다.
+3. 설치 완료 후 **VS Code를 재시작**한 뒤 `1.ipynb` 우측 상단 커널에서 **`CV_venv`**를 선택합니다.
+
+---
+
+### 방법 2: 터미널에서 파이썬 패키지만 수동 설치
+이미 Graphviz가 설치되어 있거나, 특정 파이썬 버전(예: 3.12)으로 패키지 설치만 빠르게 진행하고 싶을 때 사용합니다.
 
 ```powershell
+# 1. 가상환경 생성 (Python 3.12 지정)
 py -3.12 -m venv venv
+
+# 2. requirements.txt 패키지 일괄 설치
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
-```
-
-노트북 오른쪽 위의 **커널 선택**에서 `venv`의 Python을 선택하세요. 패키지 설치에는 시간이 걸리고, 특히 PyTorch는 용량이 큽니다. `torchviz`로 그래프를 그리려면 별도로 Graphviz 프로그램을 설치하고 `dot` 명령이 PATH에 있어야 합니다.
-
-GPU 사용 여부에 따라 PyTorch 설치 방법이 다를 수 있습니다. 위 명령은 기본 패키지를 설치합니다.
