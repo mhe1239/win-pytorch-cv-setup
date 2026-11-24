@@ -8,6 +8,24 @@ Windows 환경에서 PyTorch(CUDA 12.8) 기반 컴퓨터 비전(CV) 개발 및 �
 - **Jupyter Setup:** `CV_venv` 커널 등록 및 기본 임포트가 포함된 `1.ipynb` 생성
 
 ---
+## 기본 환경 셋팅
+
+```
+# python
+winget install --id Python.Python.3.12 -e --accept-source-agreements --accept-package-agreements
+# vscode
+winget install --id Microsoft.VisualStudioCode -e --source winget
+# docker
+winget install --id Docker.DockerDesktop -e --source winget
+# github cli
+winget install --id GitHub.cli -e --source winget
+```
+
+### Visual Studio 2022
+```
+# C/C++
+winget install --id Microsoft.VisualStudio.2022.Community -e --source winget
+```
 
 ## 설치 및 실행 방법 (택 1)
 
@@ -24,17 +42,7 @@ Windows 환경에서 PyTorch(CUDA 12.8) 기반 컴퓨터 비전(CV) 개발 및 �
 이미 Graphviz가 설치되어 있거나, 특정 파이썬 버전(예: 3.12)으로 패키지 설치만 빠르게 진행하고 싶을 때 사용합니다.
 
 
-기본 환경 셋팅
-```
-# python
-winget install --id Python.Python.3.12 -e --accept-source-agreements --accept-package-agreements
-# vscode
-winget install --id Microsoft.VisualStudioCode -e --source winget
-# docker
-winget install --id Docker.DockerDesktop -e --source winget
-# github cli
-winget install --id GitHub.cli -e --source winget
-```
+
 
 pytorch셋팅
 ```powershell
