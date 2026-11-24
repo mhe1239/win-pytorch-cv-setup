@@ -52,4 +52,6 @@ py -3.12 -m venv venv
 # 2. requirements.txt 패키지 일괄 설치
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
 winget install --id GitHub.GitHubDesktop -e --source winget
+# 4. 원본 템플릿 GitHub 저장소 연결 끊기
+Remove-Item -Recurse -Force .git -ErrorAction SilentlyContinue
 ```
