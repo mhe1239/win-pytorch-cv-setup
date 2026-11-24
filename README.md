@@ -24,9 +24,16 @@ Windows 환경에서 PyTorch(CUDA 12.8) 기반 컴퓨터 비전(CV) 개발 및 �
 이미 Graphviz가 설치되어 있거나, 특정 파이썬 버전(예: 3.12)으로 패키지 설치만 빠르게 진행하고 싶을 때 사용합니다.
 
 
-python 설치
+기본 환경 셋팅
 ```
+# python
 winget install --id Python.Python.3.12 -e --accept-source-agreements --accept-package-agreements
+# vscode
+winget install --id Microsoft.VisualStudioCode -e --source winget
+# docker
+winget install --id Docker.DockerDesktop -e --source winget
+# github cli
+winget install --id GitHub.cli -e --source winget
 ```
 
 pytorch셋팅
@@ -36,3 +43,5 @@ py -3.12 -m venv venv
 
 # 2. requirements.txt 패키지 일괄 설치
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
+winget install --id GitHub.GitHubDesktop -e --source winget
+```
