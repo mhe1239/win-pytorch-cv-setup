@@ -23,6 +23,13 @@ Windows 환경에서 PyTorch(CUDA 12.8) 기반 컴퓨터 비전(CV) 개발 및 �
 ### 방법 2: 터미널에서 파이썬 패키지만 수동 설치
 이미 Graphviz가 설치되어 있거나, 특정 파이썬 버전(예: 3.12)으로 패키지 설치만 빠르게 진행하고 싶을 때 사용합니다.
 
+
+python 설치
+```
+winget install --id Python.Python.3.12 -e --accept-source-agreements --accept-package-agreements
+```
+
+pytorch셋팅
 ```powershell
 # 1. 가상환경 생성 (Python 3.12 지정)
 py -3.12 -m venv venv
